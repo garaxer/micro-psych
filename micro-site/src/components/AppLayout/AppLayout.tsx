@@ -29,10 +29,10 @@ const AppLayout = ({ children }: ContainerProps) => {
   return <div className="root ">{children}</div>;
 };
 
-AppLayout.Banner = Banner;
-AppLayout.AppBar = AppBar;
-AppLayout.SideMenu = SideMenu;
-AppLayout.Content = Content;
-AppLayout.Footer = Footer;
-
-export default AppLayout;
+export default Object.assign(AppLayout, {
+  Banner,
+  AppBar,
+  SideMenu,
+  Content,
+  Footer,
+});

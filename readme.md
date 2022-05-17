@@ -13,3 +13,6 @@ npx create-mf-app
 Resources:
 https://module-federation.myshopify.com/products/practical-module-federation
 https://www.youtube.com/watch?v=s_Fs4AXsTnA
+
+## Uploaded backend as zip to aws lambda and attached a api gateway (adding / as an integration)
+https://jsud7r2xnk.execute-api.ap-southeast-2.amazonaws.com/
