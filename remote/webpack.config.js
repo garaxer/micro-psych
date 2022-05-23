@@ -46,6 +46,8 @@ module.exports = {
       remotes: {},
       exposes: {
         "./Counter": "./src/Counter.tsx",
+        "./Header": "./src/Header.tsx",
+        "./Footer": "./src/Footer.tsx",
       },
       shared: {
         ...deps,
