@@ -6,7 +6,7 @@ export interface ContainerProps {
 }
 
 const Banner = ({ children }: ContainerProps) => (
-  <div className="banner bg-gray-800 text-white p-1 text-right">{children}</div>
+  <div className="banner bg-gray-800 text-white  text-right">{children}</div>
 );
 const AppBar = ({ children }: ContainerProps) => (
   <div className="appBar bg-gray-100 text-black text-3xl py-1 px-2 t">
