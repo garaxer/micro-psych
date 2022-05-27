@@ -22,7 +22,7 @@ const Content = ({ children }: ContainerProps) => (
   <div className="content bg-blue-100">{children}</div>
 );
 const Footer = ({ children }: ContainerProps) => (
-  <div className="footer bg-gray-800 text-white p-1">{children}</div>
+  <div className="footer bg-gray-800 text-white">{children}</div>
 );
 
 const AppLayout = ({ children }: ContainerProps) => {

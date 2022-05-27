@@ -16,3 +16,8 @@ https://www.youtube.com/watch?v=s_Fs4AXsTnA
 
 ## Uploaded backend as zip to aws lambda and attached a api gateway (adding / as an integration)
 https://jsud7r2xnk.execute-api.ap-southeast-2.amazonaws.com/
+
+TODO rename
+micro-site to product-display-page
+and
+remote to home

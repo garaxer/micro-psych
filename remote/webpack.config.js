@@ -48,6 +48,8 @@ module.exports = {
         "./Counter": "./src/Counter.tsx",
         "./Header": "./src/Header.tsx",
         "./Footer": "./src/Footer.tsx",
+        "./services": "./src/services.ts",
+        "./HomeContent": "./src/HomeContent/HomeContent.tsx",
       },
       shared: {
         ...deps,

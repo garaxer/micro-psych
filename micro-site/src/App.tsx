@@ -1,38 +1,54 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import AppLayout from "./components/AppLayout/AppLayout";
 import SideMenu from "./components/SideMenu/SideMenu";
+import SafeComponent from "./components/SafeComponent";
 const Header = React.lazy(() => import("remote/Header"));
-const Counter = React.lazy(() => import("remote/Counter"));
+const Footer = React.lazy(() => import("remote/Footer"));
 
 import "./index.scss";
+import PDPContent from "./components/PDPContent/PDPContent";
 
-const App = () => { 
-  const [showHeader, setShowHeader] = useState(false);
-  
-  return(
-  <AppLayout>
-    <AppLayout.Banner>
-      <Suspense fallback={<div>Loading ...</div>}>
-        <Header />
-      </Suspense>
-    </AppLayout.Banner>
-    <AppLayout.AppBar>Gary's Micro-site extravaganza</AppLayout.AppBar>
-    <AppLayout.SideMenu>
-      <SideMenu />
-    </AppLayout.SideMenu>
-    <AppLayout.Content>
-      <div className="mx-auto mt-1">
-        Individual React Component Test:
-        <div className="max-w-2s">
+const App = () => {
+  return (
+    <Router>
+      <AppLayout>
+        <AppLayout.Banner>
+          <SafeComponent>
+            <Suspense fallback={<div>Loading ...</div>}>
+              <Header />
+            </Suspense>
+          </SafeComponent>
+        </AppLayout.Banner>
+        <AppLayout.AppBar>Gary's Micro-site extravaganza</AppLayout.AppBar>
+        <AppLayout.SideMenu>
+          <SideMenu />
+        </AppLayout.SideMenu>
+        <AppLayout.Content>
+          <Routes>
+            <Route path="/services/:id" element={<PDPContent />} />
+            <Route
+              path="/"
+              element={
+                <div className="mx-auto mt-1">
+                  Individual React Component Test:
+                  <div className="max-w-2s"></div>
+                </div>
+              }
+            />
+          </Routes>
+        </AppLayout.Content>
+        <AppLayout.Footer>
           <Suspense fallback={<div>Loading ...</div>}>
-            <Counter />
+            <SafeComponent>
+              <Footer />
+            </SafeComponent>
           </Suspense>
-        </div>
-      </div>
-    </AppLayout.Content>
-    <AppLayout.Footer>{new Date().getFullYear()}</AppLayout.Footer>
-  </AppLayout>
-)};
+        </AppLayout.Footer>
+      </AppLayout>
+    </Router>
+  );
+};
 ReactDOM.render(<App />, document.getElementById("app"));

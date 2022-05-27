@@ -1,6 +1,6 @@
 .root {
     display: grid;
-    grid-template: "banner banner""sideMenu appBar""sideMenu content""sideMenu footer";
+    grid-template: "banner banner""sideMenu appBar""sideMenu content""footer footer";
     grid-template-columns: 10rem 1fr;
     grid-template-rows: min-content min-content 1fr;
     grid-gap: 0;
