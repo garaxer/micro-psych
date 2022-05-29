@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { currency, getServices, Service } from "../services";
 import { addToCart, useLoggedIn } from "cart/cart";
+import { Link } from "react-router-dom";
 
 const HomeContent = () => {
   const loggedIn = useLoggedIn();
@@ -14,12 +15,14 @@ const HomeContent = () => {
     <div className="my-10 grid grid-cols-4 gap-5 ">
       {services.map((service) => (
         <div key={service.id} className="bg-white p-1">
-          <img src={service.image} alt={service.name} />
+          <Link to={`services/${service.id}`}>
+            <img src={service.image} alt={service.name} />
+          </Link>
 
           <hr />
           <div className="flex p-t-1">
             <div className="flex-grow font-bold">
-              <a>{service.name}</a>
+              <Link to={`services/${service.id}`}>{service.name}</Link>
             </div>
             <div className="flex-end">{currency.format(service.price)}</div>
           </div>

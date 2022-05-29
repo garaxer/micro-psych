@@ -54,6 +54,9 @@ module.exports = {
         "./Footer": "./src/Footer.tsx",
         "./services": "./src/services.ts",
         "./HomeContent": "./src/HomeContent/HomeContent.tsx",
+        "./AppLayout": "./src/components/AppLayout/AppLayout.tsx",
+        "./MainLayout": "./src/components/MainLayout/MainLayout.tsx",
+        "./SideMenu": "./src/components/SideMenu/SideMenu.tsx",
       },
       shared: {
         ...deps,

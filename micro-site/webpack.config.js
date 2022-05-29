@@ -48,7 +48,9 @@ module.exports = {
         micro_site: "micro_site@http://localhost:3001/remoteEntry.js",
         cart: "cart@http://localhost:3002/remoteEntry.js",
       },
-      exposes: {},
+      exposes: {
+        "./PDPContent": "./src/components/PDPContent/PDPContent.tsx",
+      },
       shared: {
         ...deps,
         react: {
