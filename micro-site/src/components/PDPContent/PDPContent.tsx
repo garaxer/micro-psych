@@ -1,5 +1,7 @@
 import { getServiceById, Service, currency } from "remote/services";
-import { useEffect, useRef, useState } from "react";
+import AddToCart from "cart/AddToCart";
+
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const PDPContent = () => {
@@ -14,8 +16,6 @@ const PDPContent = () => {
     }
   }, [id]);
 
-  const addToCart = useRef(null);
-
   if (!service) return <h3>404 Service not found</h3>;
   return (
     <div className="grid grid-cols-2 gap-5">
@@ -29,7 +29,7 @@ const PDPContent = () => {
             {currency.format(service.price)}
           </div>
         </div>
-        <div ref={addToCart}></div>
+        <AddToCart id={parseInt(id)} />
         <div className="mt-10">{service.description}</div>
         <div className="mt-10">{service.longDescription}</div>
       </div>

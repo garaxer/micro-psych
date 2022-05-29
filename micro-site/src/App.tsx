@@ -8,6 +8,7 @@ import SafeComponent from "./components/SafeComponent";
 const Header = React.lazy(() => import("remote/Header"));
 const Footer = React.lazy(() => import("remote/Footer"));
 
+import "remixicon/fonts/remixicon.css";
 import "./index.scss";
 import PDPContent from "./components/PDPContent/PDPContent";
 

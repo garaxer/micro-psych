@@ -6,6 +6,7 @@ import Header from "./Header";
 import HomeContent from "./HomeContent/HomeContent";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./index.scss";
+import "remixicon/fonts/remixicon.css";
 
 const App = () => (
   <Router>

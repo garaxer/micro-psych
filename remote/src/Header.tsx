@@ -1,7 +1,16 @@
+import MiniCart from "cart/MiniCart";
+import Login from "cart/Login";
+
 const Header = () => {
   return (
     <div className="p-2 bg-blue-500 text-white text-2xl font-bold">
-      Counselling services
+      <div className="flex">
+        <div className="flex-grow">Counselling services</div>
+        <div className="flex-end relative">
+          <MiniCart />
+          <Login />
+        </div>
+      </div>
     </div>
   );
 };

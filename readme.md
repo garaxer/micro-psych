@@ -4,6 +4,11 @@ Personal website for learning micro-frontends
 Project initialised using the module federation npx creation tool
 
 
+Start each react project seperately with npm start,
+The nest server can be started using `npm run start:dev`
+
+
+
 npx create-mf-app
 > called 'micro-site' this will be the host on 8080.
 
@@ -20,4 +25,10 @@ https://jsud7r2xnk.execute-api.ap-southeast-2.amazonaws.com/
 TODO rename
 micro-site to product-display-page
 and
-remote to home
+remote to home 
+
+Home page is the remote.
+pdp page is the host, it is hosting the 'header' that is remote to it.
+
+TODO
+Need to move the app-layout to remote(home).

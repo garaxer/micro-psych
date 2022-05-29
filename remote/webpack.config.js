@@ -43,7 +43,11 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "remote",
       filename: "remoteEntry.js",
-      remotes: {},
+      remotes: {
+        remote: "remote@http://localhost:3000/remoteEntry.js",
+        micro_site: "micro_site@http://localhost:3001/remoteEntry.js",
+        cart: "cart@http://localhost:3002/remoteEntry.js",
+      },
       exposes: {
         "./Counter": "./src/Counter.tsx",
         "./Header": "./src/Header.tsx",
