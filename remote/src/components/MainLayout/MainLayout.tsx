@@ -19,7 +19,10 @@ const MainLayout = () => {
         </AppLayout.Banner>
         <AppLayout.AppBar>
           <Link to="/">Gary's Micro-site extravaganza</Link> |
-          <Link to="/cart"> Cart</Link>
+          <Link to="/cart" id="cart">
+            {" "}
+            Cart
+          </Link>
         </AppLayout.AppBar>
         <AppLayout.SideMenu>
           <SideMenu />

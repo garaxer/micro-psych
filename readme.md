@@ -8,6 +8,9 @@ Start each react project seperately with npm start,
 The nest server can be started using `npm run start:dev`
 
 
+deploy to use
+single-spa
+bit.dev
 
 npx create-mf-app
 > called 'micro-site' this will be the host on 8080.
@@ -21,7 +24,9 @@ https://www.youtube.com/watch?v=s_Fs4AXsTnA
 
 ## Uploaded backend as zip to aws lambda and attached a api gateway (adding / as an integration)
 https://jsud7r2xnk.execute-api.ap-southeast-2.amazonaws.com/
+https://jsud7r2xnk.execute-api.ap-southeast-2.amazonaws.com/
 
+d-18ib1vdmw4.execute-api.ap-southeast-2.amazonaws.com
 TODO rename
 micro-site to product-display-page
 and
